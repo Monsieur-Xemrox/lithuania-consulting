@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #FFFFFF;
+    --foreground: #09090B;
+    --card: #FFFFFF;
+    --card-foreground: #09090B;
+    --popover: #FFFFFF;
+    --popover-foreground: #09090B;
+    --primary: #0056b3;
+    --primary-foreground: #FAFAFA;
+    --secondary: #5dcdb3;
+    --secondary-foreground: #18181B;
+    --muted: #F4F4F5;
+    --muted-foreground: #71717A;
+    --accent: #F4F4F5;
+    --accent-foreground: #18181B;
+    --destructive: #EF4444;
+    --destructive-foreground: #FAFAFA;
+    --border: #E4E4E7;
+    --input: #E4E4E7;
+    --ring: #0056b3;
+    --radius: 0.5rem;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-['Montserrat'];
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-['Montserrat'] font-semibold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#0056b3] text-white px-6 py-3 rounded-md font-medium hover:bg-[#004590] transition-colors;
+  }
+  
+  .service-card {
+    @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow;
+  }
+  
+  .service-icon {
+    @apply bg-[#ebf5ff] p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6;
+  }
+  
+  .code-block {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto relative;
+  }
+  
+  .copy-button {
+    @apply absolute top-2 right-2 p-2 bg-white/10 rounded-md hover:bg-white/20 transition-colors;
+  }
+  
+  .info-card {
+    @apply bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg;
+  }
+  
+  .wp-integration-tab {
+    @apply flex-1 py-3 transition-colors;
+  }
+  
+  .wp-integration-tab-active {
+    @apply border-b-2 border-[#0056b3] text-[#0056b3];
+  }
+  
+  .wp-integration-tab-inactive {
+    @apply text-gray-500 hover:text-gray-700;
+  }
+}
+
+nextjs-portal {
+  display: none;
+}
